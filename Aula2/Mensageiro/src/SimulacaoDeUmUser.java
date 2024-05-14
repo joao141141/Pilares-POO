@@ -2,22 +2,24 @@
 public class SimulacaoDeUmUser {
 
     public static void main(String[] args) {
-        MSNMessenger msn = new MSNMessenger();
 
-        msn.enviarMensagem();
+        ServicoMensagemInstantanea smi = null;
 
-        msn.receberMensagem();
+        /*
+		    NÃO SE SABE QUAL APP 
+		    MAS QUALQUER UM DEVERÁ ENVIAR E RECEBER MENSAGEM
+         */
+        String appEscolhido = "tlg";
 
-        FacebookMessenger fcb = new FacebookMessenger();
+        if (appEscolhido.equals("msn")) {
+            smi = new MSNMessenger();
+        } else if (appEscolhido.equals("fbm")) {
+            smi = new FacebookMessenger();
+        } else if (appEscolhido.equals("tlg")) {
+            smi = new Telegram();
+        }
 
-        fcb.enviarMensagem();
-
-        fcb.receberMensagem();
-
-        Telegram tel = new Telegram();
-
-        tel.enviarMensagem();
-
-        tel.receberMensagem();
+        smi.enviarMensagem();
+        smi.receberMensagem();
     }
 }
