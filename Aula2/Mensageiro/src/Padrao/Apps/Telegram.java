@@ -1,5 +1,6 @@
+package Padrao.Apps.Telegram;
 
-public class FacebookMessenger extends ServicoMensagemInstantanea {
+public class Telegram extends ServicoMensagemInstantanea {
 
     @Override
     public void enviarMensagem() {
@@ -13,10 +14,6 @@ public class FacebookMessenger extends ServicoMensagemInstantanea {
     @Override
     public void receberMensagem() {
         System.out.println("Recebendo Mensagem");
-    }
-
-    private void validarConectadoInternet() {
-        System.out.println("Validando se está conectado a internet");
     }
 
     private void salvarHIstoricoMensagem() {

@@ -1,3 +1,4 @@
+package Padrao.Apps;
 
 public class MSNMessenger extends ServicoMensagemInstantanea {
 
@@ -13,10 +14,6 @@ public class MSNMessenger extends ServicoMensagemInstantanea {
     @Override
     public void receberMensagem() {
         System.out.println("Recebendo Mensagem");
-    }
-
-    private void validarConectadoInternet() {
-        System.out.println("Validando se está conectado a internet");
     }
 
     private void salvarHIstoricoMensagem() {

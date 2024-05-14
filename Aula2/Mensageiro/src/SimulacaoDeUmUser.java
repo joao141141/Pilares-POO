@@ -1,3 +1,5 @@
+// Remove the incorrect package declaration
+package Apps;
 
 public class SimulacaoDeUmUser {
 
